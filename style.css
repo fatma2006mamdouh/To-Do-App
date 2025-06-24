@@ -1,0 +1,250 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url(./images/bg.jpg) no-repeat center center/cover;
+    font-family: "Edu NSW ACT Cursive", cursive;
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+}
+.todo-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    gap: 30px;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    padding: 0px 30px;
+  
+}
+.todo-app h1{
+    font-size: 2rem;
+}
+.input-area{
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+    align-items: center;
+}
+.input-area #task-input{
+    flex: 1;
+    border:0;
+    outline: 0;
+    padding: 6px 17px;
+    font-size: 1.1rem;
+    border-radius: 22px;
+    background: rgba(255, 194, 209, 0.3);
+    color:#dbdbdb;
+}
+.input-area #add-task-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: white;
+    background: rgba(255, 194, 209, 0.3);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer; 
+    padding: 3px;   
+    margin-left: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.2s ease;
+
+}
+.input-area #add-task-btn:hover{
+        transform: scale(1.1);
+        background-color: #ff6f91;
+    }
+.input-area #task-input::placeholder{
+   color:#dbdbdb;
+}
+.empty-image{
+    width: 250px;
+}
+.todos-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+#task-list{
+    width: 100%;
+}
+#task-list li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background: rgba(255, 194, 209, 0.3);
+    border-radius: 30px;
+    font-size: 1.2rem;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s ease;
+    position: relative;
+    font-family: "Roboto Slab", serif;
+    
+}
+#task-list li:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#task-list li .checkbox{
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+}
+#task-list li.completed span{
+    text-decoration: 2px line-through #000;
+    color: #000;
+    font-style:italic;
+}
+#task-list li .checkbox:checked{
+    background-color: #ff6f91;
+    transform: scale(1.1);
+}
+/* make acheck mark */
+#task-list li .checkbox:checked::before{
+    content: '\2713';
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+#task-list li span{
+    flex: 1;
+    margin-left: 15px;
+    word-wrap:break-word;
+}
+.task-buttons{
+    display: flex;
+    gap:10px;
+    margin-right: auto;
+}
+.task-buttons button {
+    background: rgba(255, 194, 209, 0.3);
+    color: #fff;
+    border: 0;
+    outline: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: all 0.2 ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.task-buttons button:hover{
+    transform: scale(1.2);
+}
+.task-buttons .edit-btn{
+    background: #ffbf00;
+}
+.task-buttons .delete-btn{
+    background: #ff6f91;
+}
+.state-container{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.detailes{
+    width: 100%;
+}
+.detailes h3{
+    color: #fff;
+}
+#progressbar{
+    width: 100%;
+    height: 7px;
+    background: rgba(255, 194, 209, 0.3);
+    position: relative;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+#progress{
+    width: 0%;
+    height: 100%;
+    background: #ff6f91;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+#numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 85px;
+    background: #ff6f91;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    font-size: 1.1rem;
+}
+@media (max-width:600px) {
+    .container{
+        padding: 0 10px;
+        max-width: 0 20px;
+    }
+    .todo-app{
+        padding: 1.5rem;
+        gap: 20;
+    }
+    #numbers{
+        width: 68px;
+        height: 68px;
+        font-size: 1rem;
+    }
+    .input-area input{
+        font-size: 1rem;
+    }
+    #task-list li{
+        font-size: 1rem;
+    }
+    .input-area #task-input{
+               
+        width: 100%;
+    }
+    .detailes h3{
+        font-size: 1rem;
+    }
+}

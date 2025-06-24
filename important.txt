@@ -1,0 +1,4 @@
+🔗 Important links:
+• CDN libraries 📚:  https://cdnjs.com/libraries/font-awesome
+• Icons 🔥:  https://fontawesome.com/
+• Confetti animations 🎊:  https://confetti.js.org/more.html
