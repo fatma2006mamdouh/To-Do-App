@@ -1,4 +1,7 @@
 <h1 align="center">🎯 To-Do App with Confetti & Voice</h1>
+<p align="center">
+  <img src="./images/todo-preview.png" alt="Responsive To-Do App" width="700"/>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/JavaScript-Project-yellow?style=for-the-badge&logo=javascript" />
